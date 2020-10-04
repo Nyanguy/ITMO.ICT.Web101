@@ -13,7 +13,7 @@ __tl;dr__ here is the contents
 ## I. Why all the hustle?
 
 In this work we will cover the basic Django optimization methods and practices used to build a high-performance web application.
-Some might say that __Python__ as an _interpreted stack-based VM_ is quite slow in compare to a "close to metal" compiled language. While it sertainly true, this statement is decieving of a general nature of a backend workflow. 
+Some might say that __Python__ as an _interpreted stack-based VM_ is quite slow in compare to a "close to metal" compiled language. While it certainly true, this statement is decieving of a general nature of a backend workflow. 
 
 > __Any__ given __Task__ can be classified in __two ways__: __CPU-bound__ or __IO-bound__.
 
