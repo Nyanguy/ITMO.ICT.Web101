@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="docs/imgs/ICTWEB.jpeg">
+  <img src="docs/img/ICTWEB.jpeg">
   <h1><b>ITMO ICT WEB 101</b></h1>
 </div>
 
