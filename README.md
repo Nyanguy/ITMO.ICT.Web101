@@ -44,11 +44,20 @@ In this example we utilize only the CPU and almost don't take any of the RAM or 
 
 Otherwise if a task(__T__) wants to read requests from any given _n_ sources, it would look something like this:
 ```python
-import json
 import requests
 
-def send_requests(url: str) -> str: pass
+def send_request(url: str) -> bytes:
+  return requests.get(url).content
 
+def manage_requests(targets_file: List[str]) -> List[bytes]:
+  reponses = []
+  with open(targets, "r") as f:
+    responses.append(send_request(f.readline()))
+  return responses
+
+if __name__ == '__main__':
+  results = manage_requests("my_req_files")
+  ...
 ```
 Not only the script accessed the local storage to fetch urls, it also has sent them over the network and __waited__ for a response. This is called a __T:IO-bound__. And it is pretty slow. However in comparison Python is a race horse! This is a example of why python dominates in the backend. Most of the backend workflow is __IO-bound__: Database queries, JSON parsing, sending/recieving requests, etc. Even with a _very fast compiled code_, the __performance will be limited by the speed of the peripherals__. Thus, there is no need for the hustle.
 

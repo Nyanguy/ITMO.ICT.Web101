@@ -1,0 +1,26 @@
+site_name: ITMO.ICT.WEB101
+nav:
+    - Home: index.md
+    - Introduction: introduction.md
+    - Caching: caching.md
+    - Task Query: tasks.md
+    - Fun Part: fun.md
+
+theme:
+  name: material
+  palette:
+    primary: white
+    accent: blue
+    scheme: default
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - pymdownx.tabbed
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+repo_url: https://github.com/Nyanguy/ITMO.ICT.Web101  
+repo_name: Nyanguy/ITMO.ICT.Web101
+  
