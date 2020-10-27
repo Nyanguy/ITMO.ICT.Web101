@@ -1,3 +1,3 @@
 <div align="center"><h1><b>IMTO ICT WEB</br>101</b></h1></div>
 
-please visit [the documentation](https://nyanguy.github.io/ITMO.ICT.Web101) to read the walkthrough [Ru]
+please visit [the documentation](https://nyanguy.github.io/ITMO.ICT.Web101) to read the tutorial [Ru]
