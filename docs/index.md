@@ -5,7 +5,7 @@ __tl;dr__ Я не веб-программист, но вот содержани�
 === "1. Introduction"
         1. Task types
         2. Optimization strategies
-        3. Asyncio
+        3. Async
         4. Lazy loading
         5. Model optimization
         6. Useful topics
