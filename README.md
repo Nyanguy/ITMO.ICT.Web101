@@ -1,3 +1,6 @@
-<div align="center"><h1>🕸🚀</br><b>ITMO ICT WEB</br>101</b></h1></div>
+<div align="center">
+  <img src="docs/imgs/ICTWEB.jpeg">
+  <h1><b>ITMO ICT WEB 101</b></h1>
+</div>
 
 please visit [the documentation](https://nyanguy.github.io/ITMO.ICT.Web101) to read the tutorial [Ru]
