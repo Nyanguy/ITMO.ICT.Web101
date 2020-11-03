@@ -226,9 +226,16 @@ CACHES = {
 
 Memcached работает как демон и захватывает определённый объём оперативной памяти. Его задачей является представление быстрого интерфейса для добавления, получения и удаления определённых данных в кэше. Все данные хранятся прямо в оперативной памяти, таким образом нет никакой дополнительной нагрузки на базу данных или файловую систему.
 
+Установите MemCached [от сюда]()
 
+И, заодно, поставьте пакет:
 ```
 pip install python-memcached
+```
+
+Затем можно запустить демон:
+```shell
+sudo service memcached start # unix-like
 ```
 
 Подключим драйвер memcached. В Django он поддерживается "из коробки" и нет надобности в установке дополнительных пакетов.
@@ -236,7 +243,37 @@ pip install python-memcached
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': '127.0.0.1:11211',
+        'LOCATION': '127.0.0.1:11211',  # where memcached is served
     }
 }
+```
+
+Далее его можно использовать точно так же как и в примере с Redis.    
+Давайте посмотрим как можно обойтись без декорации всего view.
+```python
+...
+from business import get_data # dummy import
+from django.core.cache import cache
+
+def my_view(request):
+    cache_key = 'my_unique_key' # needs to be unique
+    cache_time = 60 * 10        # 10 minute untill expiration
+    data = cache.get(cache_key) # returns None if no key-value pair
+    if not data:                
+        data = get_data()       # get new data if the cached has expired
+    
+    cache.set(cache_key, data, cache_time)  # set new cache
+return JsonResponse(data, safe=False)
+```
+
+А для решения проблем с инвалидацией старых кэшей можно использовать встроенный механизм версионирования:
+```python
+>>> # Set version 2 of a cache key
+>>> cache.set('my_key', 'hello world!', version=2)
+>>> # Get the default version (assuming version=1)
+>>> cache.get('my_key')
+None
+>>> # Get version 2 of the same key
+>>> cache.get('my_key', version=2)
+'hello world!'
 ```
