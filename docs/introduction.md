@@ -38,7 +38,7 @@ import requests
 def send_request(url: str) -> bytes:
   return requests.get(url).content
 
-def manage_requests(targets_file: List[str]) -> List[bytes]:
+def manage_requests(targets_file: str) -> List[bytes]:
   reponses: List[str] = []
   with open(targets, "r") as f:
     for url in f:
