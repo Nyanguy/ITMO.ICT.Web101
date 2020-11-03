@@ -4,7 +4,7 @@ nav:
     - Introduction: introduction.md
     - Caching: caching.md
     - Task Query: tasks.md
-    - Fun Part: fun.md
+    - Extra: fun.md
 
 theme:
   name: material
@@ -14,6 +14,8 @@ theme:
     scheme: default
   icon:
     repo: fontawesome/brands/github
+  features:
+    - navigation.sections
 
 markdown_extensions:
   - admonition

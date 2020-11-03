@@ -12,19 +12,18 @@ __tl;dr__ Я не веб-программист, но вот содержани�
         5. Model optimization
         6. Useful topics
 
-=== "2. Caching "
+=== "2. Caching"
         1. Redis 
         2. Memcached 
         3. Rabbitmq 
         4. Django Cache
 
 === "3. Tasks query"
-        1. Celery
-        2. Multiprocessing
+        1. Threading|Multiprocessing
+        2. Celery
 
-=== "4. Fun part"
+=== "4. Extra"
         1. C-extension/CFFI
         2. Cython
         3. Numba
-        4. Rust
-        5. WASM
+        4. Rust/WASM/Go
