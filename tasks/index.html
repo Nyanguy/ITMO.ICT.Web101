@@ -1,0 +1,934 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.2">
+    
+    
+      
+        <title>Task Query - ITMO.ICT.WEB101</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.19190aaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.24b84193.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cpu" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="ITMO.ICT.WEB101" class="md-header-nav__button md-logo" aria-label="ITMO.ICT.WEB101">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            ITMO.ICT.WEB101
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Task Query
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/Nyanguy/ITMO.ICT.Web101/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Nyanguy/ITMO.ICT.Web101
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ITMO.ICT.WEB101" class="md-nav__button md-logo" aria-label="ITMO.ICT.WEB101">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    ITMO.ICT.WEB101
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Nyanguy/ITMO.ICT.Web101/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Nyanguy/ITMO.ICT.Web101
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../caching/" class="md-nav__link">
+      Caching
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Task Query
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Task Query
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    🧮 CPU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiprocessingthreadingasync" class="md-nav__link">
+    🎢 Multiprocessing|Threading|Async
+  </a>
+  
+    <nav class="md-nav" aria-label="🎢 Multiprocessing|Threading|Async">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#threading" class="md-nav__link">
+    🧵 Threading
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concurentfutures" class="md-nav__link">
+    📈 concurent.futures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async" class="md-nav__link">
+    📞 Async
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiprocessing" class="md-nav__link">
+    ∥ Multiprocessing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#celery" class="md-nav__link">
+    💪 Celery
+  </a>
+  
+    <nav class="md-nav" aria-label="💪 Celery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scheduler" class="md-nav__link">
+    Scheduler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boot" class="md-nav__link">
+    Boot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../fun/" class="md-nav__link">
+      Extra
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    🧮 CPU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiprocessingthreadingasync" class="md-nav__link">
+    🎢 Multiprocessing|Threading|Async
+  </a>
+  
+    <nav class="md-nav" aria-label="🎢 Multiprocessing|Threading|Async">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#threading" class="md-nav__link">
+    🧵 Threading
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concurentfutures" class="md-nav__link">
+    📈 concurent.futures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async" class="md-nav__link">
+    📞 Async
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiprocessing" class="md-nav__link">
+    ∥ Multiprocessing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#celery" class="md-nav__link">
+    💪 Celery
+  </a>
+  
+    <nav class="md-nav" aria-label="💪 Celery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scheduler" class="md-nav__link">
+    Scheduler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boot" class="md-nav__link">
+    Boot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Nyanguy/ITMO.ICT.Web101/edit/master/docs/tasks.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Task Query</h1>
+                
+                <h2 id="cpu">🧮 CPU</h2>
+<p>В этой главе мы рассмотрим механизмы оптимизации <strong>вычислений</strong> на сервере.  <br />
+Скажем, у нас есть функция <code>f(**kwargs) -&gt; int</code>, которая чисто случайно оказывается функцией <a href="https://en.wikipedia.org/wiki/Busy_beaver">BusyBeaver</a>: 
+<div class="highlight"><pre><span></span><code><span class="c1"># views.py</span>
+<span class="o">...</span>
+
+<span class="nd">@api_view</span><span class="p">([</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>  <span class="c1"># Some DRF magic</span>
+<span class="k">def</span> <span class="nf">bb_view</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">json</span><span class="p">):</span>
+    <span class="n">iterations</span> <span class="o">=</span> <span class="n">busy_beaver</span><span class="p">(</span><span class="o">**</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;states&#39;</span><span class="p">))</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;HALTED AFTER: </span><span class="si">{</span><span class="n">iterations</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+Как вы понимаете, в зависимости от указанных параметров в <code>states</code>, запрос к данному view может выполняться <em>очень долго</em>; и браузер выкинет таймаут. Что хуже, если все пользователи решат воспользоваться великолепной фичей вашего сайта, все воркеры обслуживающие клиентов также залипнут в ожидании завершения функции, что сделает любой запрос на наш сайт <strong>необслуживаемым</strong>. Хуже данной ситуации уже не может быть, поэтому давайте рассмотрим механизмы того как это можно исправить.  <br />
+Ну конечно же можно делегировать выполнение задач в дочерние потоки или процессы!</p>
+<h2 id="multiprocessingthreadingasync">🎢 Multiprocessing|Threading|Async</h2>
+<h3 id="threading">🧵 Threading</h3>
+<p>В Python дела с потоками обстоят не так просто. Виной всему является злощастный <strong>GIL</strong> [<strong>G</strong>lobal <strong>I</strong>nterpreter <strong>L</strong>ock]. Он позволяет лишь <strong>одному</strong> потоку исполнять байткод. Это сделано из соображений простоты реализации интерпретатора и потокобезопасности. Многие, обычно сторонние от Python-сообщества программисты, слыша GIL начинают орать как гиены, что это замедляет Python, это жутко не удобно и т.п. Хотя, стоит отметить, что некоторых реализациях языка его попросту нет. <br />
+На самом деле, если понимать устройство лока, то можно использовать его по полной. 
+Трепищите, это <strong>GIL</strong> в референсной интепретации <strong>CPython</strong>:
+<div class="highlight"><pre><span></span><code><span class="k">static</span> <span class="n">PyThread_type_lock</span> <span class="n">interpreter_lock</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="cm">/* This is the GIL */</span>
+</code></pre></div>
+Да, это просто булевая переменная в терминах языка <code>C</code>. Сама спецификация языка указывает на еще 2 дополнительные перменные для менеджмента состояния <code>gil_mutex</code> и <code>gil_cond</code> с кучей макросов для их логики. Вы можете <a href="https://github.com/python/cpython/blob/master/Python/ceval_gil.h">посмотреть сюда</a> чтобы прочитать исходный код GIL'а.   <br />
+Для исполнения каждого потока мы должны сделать <code>acquire_gil</code>, а исполняемый до этого поток должен сделать <code>release_gil</code>. Такой процесс происходит каждый раз когда мы исполняемся заданное количество времени или происходит блокирующий вызов.</p>
+<p>Чтобы создать поток достаточно импортировать библиотеку <code>threading</code>. Давайте улучшим пример из Introduction.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Thread</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="k">def</span> <span class="nf">send_request</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">result</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+  <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>  <span class="c1"># disgusting write from within a thread</span>
+
+<span class="k">def</span> <span class="nf">manage_requests</span><span class="p">(</span><span class="n">targets_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">bytes</span><span class="p">]:</span>
+  <span class="n">reponses</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="n">thread_pool</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Thread</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># create a thread pool</span>
+  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">targets</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">thread_pool</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">send_request</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">reponses</span><span class="p">,)))</span> <span class="c1"># spawn a thread</span>
+        <span class="n">thread_pool</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>  <span class="c1"># start it</span>
+        <span class="n">responses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">send_request</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
+  <span class="p">[</span><span class="n">thread</span><span class="o">.</span><span class="n">join</span> <span class="k">for</span> <span class="n">thread</span> <span class="ow">in</span> <span class="n">thread_pool</span><span class="p">]</span>  <span class="c1"># join threads and await results</span>
+  <span class="k">return</span> <span class="n">responses</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+  <span class="n">results</span> <span class="o">=</span> <span class="n">manage_requests</span><span class="p">(</span><span class="s2">&quot;my_req_urls&quot;</span><span class="p">)</span>
+  <span class="o">...</span> <span class="c1"># Process results</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="concurentfutures">📈 concurent.futures</h3>
+<p>Цитируя умных людей</p>
+<div class="admonition quote">
+<p class="admonition-title">Raymond Hettinger</p>
+<p>There's got to be a better way to do this!</p>
+</div>
+<p>Конечно стандартная библиотека Python растет и теперь у нас есть более приятный интерфейс для решения подобных задач: <code>concurent.futures</code>. Этот модуль является высокоуровневым интерфейсом для асинхронного исполнения функций.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<span class="kn">from</span> <span class="nn">сoncurent</span> <span class="kn">import</span> <span class="n">futures</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="k">def</span> <span class="nf">send_request</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+  <span class="k">return</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">content</span>  <span class="c1"># now that&#39;s much better</span>
+
+<span class="k">def</span> <span class="nf">manage_requests</span><span class="p">(</span><span class="n">targets_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">bytes</span><span class="p">]:</span>
+  <span class="n">reponses</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="n">thread_pool</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Thread</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># create a thread pool</span>
+  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">targets</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+    <span class="c1"># Start the load operations and mark each future with its URL</span>
+    <span class="n">future_to_url</span> <span class="o">=</span> <span class="p">{</span><span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">send_request</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="mi">60</span><span class="p">):</span> <span class="n">url</span> <span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">f</span><span class="p">}</span>
+    <span class="k">for</span> <span class="n">future</span> <span class="ow">in</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">as_completed</span><span class="p">(</span><span class="n">future_to_url</span><span class="p">):</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">future_to_url</span><span class="p">[</span><span class="n">future</span><span class="p">]</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">future</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2"> generated an exception: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2"> page is </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s2"> bytes&quot;</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">responses</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+  <span class="n">results</span> <span class="o">=</span> <span class="n">manage_requests</span><span class="p">(</span><span class="s2">&quot;my_req_urls&quot;</span><span class="p">)</span>
+  <span class="o">...</span> <span class="c1"># Process results</span>
+</code></pre></div>
+</td></tr></table>
+<p>Но знаете что?</p>
+<div class="admonition quote">
+<p class="admonition-title">Raymond Hettinger</p>
+<p>There's got to be a better way to do this!</p>
+</div>
+<p>Если вы отматаете на два примера вверх, то увидите, важную фразу, что смена исполнительного потока <strong>происходит при блокирующем вызове</strong>. Значит при каждом обращении к IO мы можем делигировать питону задачи, пока он будет ожидать ответа. Эта идея фундаментальна для осознания концепции асинхронных функций и конкурентного исполнения кода. </p>
+<p>То о чем я пишу можно изобразить следующим образом:
+<img alt="img" src="../img/gil.png" /></p>
+<h3 id="async">📞 Async</h3>
+<p>Начиная с Python 3.5 в языке появились ключевые слова <code>async</code>/<code>await</code>, которые позволяют пользователю задавать в удобной форме воркфлоу. </p>
+<p>```python linenums=1
+import aiohttp
+import asyncio</p>
+<p>async def send_request(url: str) -&gt; bytes:
+    return await requests.get(url).content</p>
+<p>async def manage_requests(targets_file: str) -&gt; List[bytes]:
+    tasks = []
+    with open(target_file, "r") as f:
+        for url in f:
+            tasks.append(send_request(url))
+        responses = await asyncio.gather(*tasks)
+    return responses</p>
+<p>if <strong>name</strong> == '<strong>main</strong>':
+    loop = asyncio.get_event_loop()  # We need to create an event_loop
+    loop.run_until_complete(manage_requests())
+<div class="highlight"><pre><span></span><code>Данный метод при каждом _await_ будет менять активный поток и делать следующую итерацию в цикле `event_loop`. Однако `requests` библиотека в терминах асинхронной парадигмы является __блокирующей__. Дело в том, что для максимально оптимального использования вызовов и жанглирования потоками, ваш код не должен содержать обыкновенных блокирующих вызовов, иначе, встретив такой вызов, поток просто встанет и будет ожидать завершения. Поэтому когда вы используете какие-либо библиотеки с AsyncIO, обязательно убедитесь, что она также поддерживает `async`/`await`.    
+Ну а теперь: 
+
+!!! quote &quot;Raymond Hettinger&quot;
+    There&#39;s got to be a better way to do this!
+
+### 🕸 aiohttp
+
+Одним из примеров неблокирующей библиотеки для работы с веб-запросами является aiohttp. Она обеспечит оптимальное исполнение кода в &quot;неблокирующем&quot; формате:
+
+Сначала
+```shell
+pip install aiohttp
+</code></pre></div></p>
+<p>И затем</p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<span class="kn">import</span> <span class="nn">aiohttp</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">()</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">manage_requests</span><span class="p">(</span><span class="n">targets_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">bytes</span><span class="p">]:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">targets_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">async</span> <span class="k">with</span> <span class="n">aiohttp</span><span class="o">.</span><span class="n">ClientSession</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+            <span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span><span class="n">tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fetch</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span> <span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">f</span><span class="p">]</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">tasks</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span>
+    <span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">manage_requests</span><span class="p">())</span>
+</code></pre></div>
+</td></tr></table>
+Гораздо лучше. Однако мы по прежнему не можем действительно параллельно выполнять несколько инструкций. Для того чтобы обойти это ограничение был сделан <code>multiprocessing</code></p>
+<h3 id="multiprocessing">∥ Multiprocessing</h3>
+<p>Благодаря GIL, для достижения действительно параллельного кода, в Python используются процессы. Сразу же о плохом: значительные накладные росходы по сравнению с потоками, нет разделенной памяти между процессами. На сегодняшний день ведутся разработки по созданию суб-интерпретаторов для достижения параллельности с меньшими расходами, но это все еще в ранней стадии. Хотя в CPython уже есть API.</p>
+<p>Давайте попробуем убрать блокировку нашего view из начала глава:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># views.py</span>
+<span class="o">...</span>
+<span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Process</span>
+
+<span class="nd">@api_view</span><span class="p">([</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>  <span class="c1"># Some DRF magic</span>
+<span class="k">def</span> <span class="nf">bb_view</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">json</span><span class="p">):</span>
+    <span class="n">iterations</span> <span class="o">=</span> <span class="n">Process</span><span class="p">(</span><span class="n">target</span> <span class="o">=</span> <span class="n">busy_beaver</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="o">**</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;states&#39;</span><span class="p">)))</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;HALTED AFTER: </span><span class="si">{</span><span class="n">iterations</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Также есть удобный <code>Pool</code> интерфейс для создания множества процессов за раз. Например: 
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="k">as</span> <span class="n">p</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Теперь наша задача будет считаться в абсолютно параллельном процессе. Однако стоит постоянно держать в голове, что потоки и процессы также несут накладные расходы на их создание, передачу результатов и т.п. Поэтому не стоит пытаться распараллелить абсолютно каждую задачу.</p>
+<h2 id="celery">💪 Celery</h2>
+<p>Конечно же, для параллельного вычисления есть решения и лучше! Если мы обслуживаем множество различных сложных запросов, то нам просто необходима централизованная система для мониторинга их исполнения и выстраивания очередей в соответствии с нагрузкой. Такой функционал предоставляет <code>Celery</code>.</p>
+<p>Celery позволяет задать очень гибкую настройку под любую нагрузку! Архитектура выглядит следующим образом:</p>
+<p><img alt="img" src="../img/celery.png" /></p>
+<p>Приложение, при запросе, создает соответствующую задачу, которая отправляется в брокер, который постоянно читают <code>celery</code> воркеры. Как только находится сообщение с задачей в очереди, воркер начинает его исполнение, и при необходимости сохраняет результат, который приложение может получить уже через API результатов в <code>celery</code>.
+В верхем-левом углу указан Scheduler, который занимается исполнением cron-like задач. Т.е. мы можем задать некоторую периодическую задачу, например, очистить бд каждый день в 3 часа ночи или каждую минуту отправить пинг стороннему сервису. Все это очень легко сделать с <code>Celery</code>, но сначала установка:</p>
+<p><code>pip install Celery</code></p>
+<p>либо можно подтянуть сразу зависимости к выбранному стеку:</p>
+<p><code>pip install "celery[librabbitmq,redis,auth,msgpack]"</code></p>
+<div class="admonition note">
+<p class="admonition-title">Celery</p>
+<p>Я настоятельно рекомендую ознакомиться с официальной документацией, поскольку Celery умеет так много, что по нему нужно писать отдельную методичку. <a href="https://docs.celeryproject.org/en/stable/index.html">Подробнее тут</a></p>
+</div>
+<p>Для настройки создадим файл <code>celery.py</code> в корне <code>proj</code>, где лежит <code>settings.py</code>.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># celery.py</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">celery</span> <span class="kn">import</span> <span class="n">Celery</span>
+
+<span class="c1"># set the default Django settings module for the &#39;celery&#39; program.</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;DJANGO_SETTINGS_MODULE&#39;</span><span class="p">,</span> <span class="s1">&#39;proj.settings&#39;</span><span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Celery</span><span class="p">(</span><span class="s1">&#39;proj&#39;</span><span class="p">)</span>
+
+<span class="c1"># Using a string here means the worker doesn&#39;t have to serialize</span>
+<span class="c1"># the configuration object to child processes.</span>
+<span class="c1"># - namespace=&#39;CELERY&#39; means all celery-related configuration keys</span>
+<span class="c1">#   should have a `CELERY_` prefix.</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config_from_object</span><span class="p">(</span><span class="s1">&#39;django.conf:settings&#39;</span><span class="p">,</span> <span class="n">namespace</span><span class="o">=</span><span class="s1">&#39;CELERY&#39;</span><span class="p">)</span>
+
+<span class="c1"># Load task modules from all registered Django app configs.</span>
+<span class="n">app</span><span class="o">.</span><span class="n">autodiscover_tasks</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Добавим это в <code>__init__.py</code> для того, чтобы клиент <code>celery</code> мог увидеть наши веб-приложения:
+<div class="highlight"><pre><span></span><code><span class="c1"># This will make sure the app is always imported when</span>
+<span class="c1"># Django starts so that shared_task will use this app.</span>
+<span class="kn">from</span> <span class="nn">.celery</span> <span class="kn">import</span> <span class="n">app</span> <span class="k">as</span> <span class="n">celery_app</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;celery_app&#39;</span><span class="p">,)</span>
+</code></pre></div></p>
+<p>Теперь внутри приложений можно задать отдельные задачи в <code>tasks.py</code>
+<div class="highlight"><pre><span></span><code>- app1/
+    - tasks.py
+    - models.py
+- app2/
+    - tasks.py
+    - models.py
+</code></pre></div></p>
+<p>Определим задачу из начала главы для <code>Celery</code>:
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span>
+<span class="kn">from</span> <span class="nn">my.proj</span> <span class="kn">import</span> <span class="n">celery_app</span>
+
+<span class="nd">@celery_app</span><span class="o">.</span><span class="n">task</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;bb_task&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">busy_beaver</span><span class="p">(</span><span class="n">instructions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">):</span>
+    <span class="o">...</span><span class="c1"># bb code</span>
+</code></pre></div></p>
+<p>Отлично, теперь мы можем просто воспользоваться интерфейсом запуска задач на воркере -- <code>delay</code>. По своей сути это такой <code>apply_async</code>. <a href="https://docs.celeryproject.org/en/stable/userguide/calling.html">Здесь</a> подробнее об этом написано.
+<div class="highlight"><pre><span></span><code><span class="c1"># views.py</span>
+<span class="o">...</span>
+
+<span class="nd">@api_view</span><span class="p">([</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>  <span class="c1"># Some DRF magic</span>
+<span class="k">def</span> <span class="nf">bb_view</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">json</span><span class="p">):</span>
+    <span class="n">busy_beaver</span><span class="o">.</span><span class="n">delay</span><span class="p">(</span><span class="o">**</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;states&#39;</span><span class="p">))</span>  <span class="c1"># start the task</span>
+    <span class="c1"># logging.info(f&quot;HALTED AFTER: {iterations}&quot;)</span>
+</code></pre></div></p>
+<h3 id="results">Results</h3>
+<p>Однако, мы не сможем увидеть результат(((
+Для доступа к резльтатом необходимо дополнительно установить расширение 
+<code>pip install django-celery-results</code>
+и добавить 
+<div class="highlight"><pre><span></span><code><span class="c1"># settings.py</span>
+<span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="o">...</span><span class="p">,</span>
+    <span class="s1">&#39;django_celery_results&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+затем создать таблицу <code>python manage.py migrate django_celery_results</code>.  <br />
+Далее необходимо указать бэкенд для наших результатов, и здесь мы можем использовать старый-добрый кэш.
+<div class="highlight"><pre><span></span><code><span class="c1"># celery setting.</span>
+<span class="n">CELERY_CACHE_BACKEND</span> <span class="o">=</span> <span class="s1">&#39;default&#39;</span>
+
+<span class="c1"># django setting.</span>
+<span class="n">CACHES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="o">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="scheduler">Scheduler</h3>
+<p>Этот пакет позволяет устанавливать расписание для задач. Для установки выполните <code>pip install django-celery-beat</code>.  <br />
+Затем зарегестрируйте приложение в Django:
+<div class="highlight"><pre><span></span><code><span class="c1"># settings.py</span>
+<span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="o">...</span><span class="p">,</span>
+    <span class="s1">&#39;django_celery_beat&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></p>
+<p>И наконец сделайте миграцию бд <code>python manage.py migrate</code></p>
+<p>Один из способов регистрации расписания -- указание в конфиге <code>Celery</code> приложения:
+<div class="highlight"><pre><span></span><code><span class="n">instructions</span> <span class="o">=</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span>
+<span class="n">app</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">beat_schedule</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;bb-every-30-seconds&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;task&#39;</span><span class="p">:</span> <span class="s1">&#39;proj.tasks.bb_task&#39;</span><span class="p">,</span> <span class="c1"># path to the function through the module tree</span>
+        <span class="s1">&#39;schedule&#39;</span><span class="p">:</span> <span class="mf">30.0</span><span class="p">,</span>
+        <span class="s1">&#39;args&#39;</span><span class="p">:</span> <span class="p">(</span><span class="o">**</span><span class="n">instructions</span><span class="p">)</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+<span class="n">app</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">timezone</span> <span class="o">=</span> <span class="s1">&#39;UTC&#39;</span>
+</code></pre></div>
+Об альтернативных способах запуска -- <a href="https://docs.celeryproject.org/en/stable/userguide/periodic-tasks.html#beat-custom-schedulers">подробнее тут</a></p>
+<h3 id="boot">Boot</h3>
+<p>Наконец, чтобы запустить воркер Celery, достаточно написать в терминале: <code>celery -A proj worker -l INFO</code>. <code>-b</code> Добавит к воркерам scheduler, который сможет мониторить расписание задач.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../caching/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Caching
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../fun/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Extra
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../assets/javascripts/bundle.c1ccee15.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.sections'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
